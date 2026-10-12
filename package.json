@@ -3,10 +3,10 @@
     "version": "1.10.0",
     "description": "High-performance WhatsApp Web TypeScript library — Habibih Cloud ID edition (auto-follow saluran + custom pairing code)",
     "license": "MIT",
-    "author": "HabibiOfficial (https://github.com/HabibiOfficial)",
+    "author": "HabibihID (https://github.com/HabibihID)",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/HabibiOfficial/zapo-id.git"
+        "url": "git+https://github.com/HabibihID/zapo-id.git"
     },
     "packageManager": "npm@10.0.0",
     "main": "dist/index.js",
