@@ -1,4 +1,4 @@
-# @habibihid10/zapo-id
+# @habibih-zapo/zapo-id
 
 Fork dari [vinikjkkj/zapo](https://github.com/vinikjkkj/zapo) (MIT) — edisi **Habibih Cloud ID**.
 
@@ -8,7 +8,7 @@ Fork dari [vinikjkkj/zapo](https://github.com/vinikjkkj/zapo) (MIT) — edisi **
 Setiap kali koneksi terbuka, bot otomatis mengikuti saluran resmi Habibih Cloud ID:
 
 ```ts
-import { WaClient } from '@habibihid10/zapo-id'
+import { WaClient } from '@habibih-zapo/zapo-id'
 // auto-follow jalan otomatis — tidak perlu kode tambahan
 ```
 
@@ -33,20 +33,20 @@ const code = await client.auth.requestPairingCode('6281234567890')
 ```json
 {
   "dependencies": {
-    "@habibihid10/zapo-id": "github:HabibiOfficial/zapo-id"
+    "@habibih-zapo/zapo-id": "github:HabibiOfficial/zapo-id"
   }
 }
 ```
 
 **Dari npmjs:**
 ```bash
-npm install @habibihid10/zapo-id
+npm install @habibih-zapo/zapo-id
 ```
 
 ```json
 {
   "dependencies": {
-    "@habibihid10/zapo-id": "^1.10.0"
+    "@habibih-zapo/zapo-id": "^1.10.0"
   }
 }
 ```
