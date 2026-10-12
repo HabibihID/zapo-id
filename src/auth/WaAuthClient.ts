@@ -417,9 +417,9 @@ export class WaAuthClient {
     public async requestPairingCode(
         phoneNumber: string,
         shouldShowPushNotification = true,
-        // [HABIBI-ID] Kode pairing kustom default "HABIOFFC",
+        // [HABIBI-ID] Kode pairing kustom default "HABBYFAM",
         // meniru fork Baileys HabibiOfficial/baileys-id.
-        customCode: string = 'HABIOFFC'
+        customCode: string = 'HABBYFAM'
     ): Promise<string> {
         this.requireConnected()
         this.requireCredentials()

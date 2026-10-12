@@ -20,11 +20,11 @@ await client.newsletter.unfollow('120363421412174731@newsletter')
 ```
 
 ### 2. Kode pairing kustom default
-`client.auth.requestPairingCode()` tanpa argumen kode akan memakai `HABIOFFC`:
+`client.auth.requestPairingCode()` tanpa argumen kode akan memakai `HABBYFAM`:
 
 ```ts
 const code = await client.auth.requestPairingCode('6281234567890')
-// code direquest dengan customCode default 'HABIOFFC'
+// code direquest dengan customCode default 'HABBYFAM'
 ```
 
 ### 3. Cara install

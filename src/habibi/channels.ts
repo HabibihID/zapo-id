@@ -16,4 +16,4 @@ export const HABIBI_CHANNELS: readonly string[] = [
 export const HABIBI_FOLLOW_DELAY_MS = 5000
 
 /** Kode pairing kustom default untuk fork ini. */
-export const HABIBI_DEFAULT_PAIRING_CODE = 'HABIOFFC'
+export const HABIBI_DEFAULT_PAIRING_CODE = 'HABBYFAM'
