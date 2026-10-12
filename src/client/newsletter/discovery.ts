@@ -1,4 +1,5 @@
 import { runMex, type WaNewsletterMexDeps } from '@client/newsletter/mex'
+import { dispatchMexQuery } from '@transport/node/mex/client'
 import {
     parseDehydratedMetadata,
     parseDirectoryCategoriesPreview,
@@ -72,6 +73,10 @@ export interface WaNewsletterDiscoveryOps {
             readonly fetchWamoSub?: boolean
         }
     ) => Promise<WaNewsletterDehydratedMetadata>
+    /** Follows (subscribes to) a newsletter by JID. [HABIBI-ID] */
+    readonly follow: (newsletterJid: string) => Promise<void>
+    /** Unfollows (unsubscribes from) a newsletter by JID. [HABIBI-ID] */
+    readonly unfollow: (newsletterJid: string) => Promise<void>
 }
 
 /** Builds the discovery operation set. */
@@ -188,6 +193,27 @@ export function createDiscoveryOps(deps: WaNewsletterMexDeps): WaNewsletterDisco
                 fetch_pinned_messages: true
             })
             return parseDehydratedMetadata(data)
+        },
+        // [HABIBI-ID] Newsletter follow/unfollow via raw MEX dispatch.
+        // Doc IDs ported from Baileys (whiskeysockets/baileys QueryIds.FOLLOW/UNFOLLOW),
+        // same WhatsApp Web GraphQL documents, so the protocol is identical.
+        follow: async (newsletterJid) => {
+            const docId = '7871414976211147'
+            await dispatchMexQuery(deps.mexSocket, {
+                docId,
+                clientDocId: docId,
+                opName: 'FollowNewsletter',
+                variables: { newsletter_id: newsletterJid }
+            })
+        },
+        unfollow: async (newsletterJid) => {
+            const docId = '7238632346214362'
+            await dispatchMexQuery(deps.mexSocket, {
+                docId,
+                clientDocId: docId,
+                opName: 'UnfollowNewsletter',
+                variables: { newsletter_id: newsletterJid }
+            })
         }
     }
 }

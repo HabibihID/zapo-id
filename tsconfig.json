@@ -25,6 +25,8 @@
             "@auth/*": ["src/auth/*"],
             "@client": ["src/client"],
             "@client/*": ["src/client/*"],
+            "@habibi": ["src/habibi"],
+            "@habibi/*": ["src/habibi/*"],
             "@crypto": ["src/crypto"],
             "@crypto/*": ["src/crypto/*"],
             "@infra/*": ["src/infra/*"],

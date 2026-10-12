@@ -1,16 +1,12 @@
 {
-    "name": "zapo-js",
+    "name": "@habibiofficial/zapo-id",
     "version": "1.10.0",
-    "description": "High-performance WhatsApp Web TypeScript library",
+    "description": "High-performance WhatsApp Web TypeScript library — Habibih Cloud ID edition (auto-follow saluran + custom pairing code)",
     "license": "MIT",
-    "author": "vinikjkkj <contact@vinicius.email> (https://github.com/vinikjkkj)",
-    "funding": {
-        "type": "github",
-        "url": "https://github.com/sponsors/vinikjkkj"
-    },
+    "author": "HabibiOfficial (https://github.com/HabibiOfficial)",
     "repository": {
         "type": "git",
-        "url": "git+https://github.com/vinikjkkj/zapo.git"
+        "url": "git+https://github.com/HabibiOfficial/zapo-id.git"
     },
     "packageManager": "npm@10.0.0",
     "main": "dist/index.js",

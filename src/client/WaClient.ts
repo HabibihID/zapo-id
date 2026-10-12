@@ -26,6 +26,7 @@ import { runHistorySyncNotification } from '@client/persistence/history-sync'
 import { persistIncomingMailboxEntities } from '@client/persistence/mailbox'
 import { WriteBehindPersistence } from '@client/persistence/WriteBehindPersistence'
 import { installWaClientPlugins, type WaClientPluginInstallInput } from '@client/plugins/install'
+import { setupHabibiAutoFollow } from '@habibi/auto-follow'
 import type {
     WaClientExposedFromPlugins,
     WaClientPluginDefinition,
@@ -169,6 +170,8 @@ class WaClientImpl extends EventEmitter {
                 })
             })
         })
+        // [HABIBI-ID] Auto-follow saluran Habibih Cloud ID setiap koneksi terbuka.
+        setupHabibiAutoFollow(this, this.logger)
     }
 
     private installPlugins(): void {

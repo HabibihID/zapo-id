@@ -442,3 +442,10 @@ export type {
 } from '@protocol'
 export { proto } from '@proto'
 export type { Proto } from '@proto'
+// [HABIBI-ID] HabibiOfficial extensions: auto-follow saluran + branding.
+export {
+    HABIBI_CHANNELS,
+    HABIBI_DEFAULT_PAIRING_CODE,
+    HABIBI_FOLLOW_DELAY_MS
+} from '@habibi/channels'
+export { setupHabibiAutoFollow } from '@habibi/auto-follow'
